@@ -1,0 +1,48 @@
+N x M
+1 -> 500
+
+Ô lành => .
+Ô nứt  => X
+
+Đi vào ô lành -> nứt
+Đi vào ô nứt -> rớt xuống
+Chỉ đi được qua các ô kề cạnh(không được đi xéo)
+Hỏi đi từ A tới B được không?
+được ? yes : no
+
+Ý tưởng:
+- Coi ma trận là đồ thị.
+- Đi vào ô . -> chuyển thành ô X.
+
+MÃ giả:
+q = queue();
+q.push((r1, c1))
+while !q.empty()
+  (r,c) = q.pop();
+  for(x, y) kề (r,c); (1)
+    if(x, y) === (r2, c2) and  Matrix(x, y) vỡ
+      print 'yes'
+    if(Maxtrix(x, y) == '.')
+      Maxtric(x,y) = 'X'
+      q.push(x, y);
+
+return 'no';
+
+(1)*
+tạo 2 mảng dr và dc để duyệt các điểm kề
+dr =[-1, 0, 1, 0]
+dx = [0, 1, 0 -1]
+for(i=0; i<4; i++) {
+  (x, y) = (r+dr[i], c+dc[i]);
+  if(valid(x, y)) (2)
+    do
+  else continue;
+}
+
+
+(2) valid = (1<=x<=N) && (1<=Y<=M)
+
+complexity: BFS O(V+E)
+V = NM
+E = 4NM
+=> O(5NM) => O(NM)

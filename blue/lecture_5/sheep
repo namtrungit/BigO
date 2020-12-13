@@ -1,0 +1,21 @@
+Ma trận N x M
+. : đất
+# : hàng rào
+k : cừu
+v : sói
+
+chỉ đi được qua các ô kề cạnh
+đếm số cừu và sói
+
+Input:
+N M
+ma trận...
+
+Output: số cừu và sói còn lại
+
+Ý tưởng:
+- Với vùng riêng biệt, dùng BFS để duyệt qua các ô trong vùng đó.
+  + Nếu vùng đó chứa 1 ô nào đo nằm trên biên: bảo toàn số cừu và sói.
+  + Ngược lại: tính số cừu và sói.
+
+complexity: 0(N*M);

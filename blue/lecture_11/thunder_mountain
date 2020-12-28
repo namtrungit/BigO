@@ -1,0 +1,24 @@
+B1: Read input
+  (N, x[i], y[i])
+
+B2: Build graph: // Vector 0 -> N-1
+  Với i = 0 -> N - 1;
+    với j = 0 -> N -1;
+      d = distance(i, j); (1)
+      nếu d <= 10 => cho vào đồ thị.
+        graph[i][j] = d;
+
+B3: Floyd-warshall();
+B4: ans=0
+      i = 0->N-1;
+        j = 0->N-1;
+          nếu dist[i][j] != INF
+            update ans = dist[i][j]
+B5: cout << ans;
+
+
+(1) distance(i, j):
+      return sqrt((x[i] - x[j])^2 - (y[i] - y[j])^2) 
+
+
+On^3

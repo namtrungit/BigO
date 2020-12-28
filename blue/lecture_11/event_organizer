@@ -1,0 +1,12 @@
+Read T;
+For T:
+  Read N
+  dist[i][j] = [0]
+    với i và j trong [0, 48]
+
+  for N lần:
+    read S, E, C:
+    if C > dist[C][E]
+      dist[S][E] = C
+  FloydWarshall() // Customize
+  cout << dist[0][48]

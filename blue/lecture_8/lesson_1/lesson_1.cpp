@@ -7,12 +7,6 @@ const int INF = 1e9;
 vector<int> dist(MAX, INF);
 vector<vector<pair<int,int>>> graph;
 
-struct option {
-  bool operator() (const pair<int, int> &a, const pair<int, int> &b) const {
-    return a.second > b.second;
-  }
-};
-
 void Dijkstra(int s) {
   priority_queue<pair<int,int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
   pq.push(make_pair(s, 0));
